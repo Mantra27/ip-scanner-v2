@@ -118,7 +118,7 @@ const sourceTree = async (firstArgument, secondArgument) => {
 
             async function lsExample() {
                 try {
-                  const { stderr, stdout } = await exec(`ping ${list[loop]} -c 1`);
+                  const { stderr, stdout } = await exec(`ping ${list[loop]} -n 1`);
 
                   if(stderr){
                       console.log("stderr: ", stdout);
