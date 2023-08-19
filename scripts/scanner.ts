@@ -51,9 +51,7 @@ async function scanIPRange(startIP: string, endIP: string) {
   }
 }
 
-rl.question('Enter starting IP (e.g., 1.1.1.0): ', (startIP: string) => {
-  rl.question('Enter ending IP (e.g., 1.1.1.3): ', (endIP: string) => {
-    scanIPRange(startIP, endIP).catch((error) => console.error(error));
-    rl.close();
-  });
-});
+
+module.exports = (startIP:any, endIP:any)=>{
+  scanIPRange(startIP, endIP).catch((error) => console.error(error));
+}
